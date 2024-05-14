@@ -9,4 +9,11 @@ def deal_card():
 def calculate_score(list_cards):
     """Calculates the score of the user"""
     total_score = sum(list_cards)
+    if total_score == 21 and len(list_cards) == 2:
+        return 0
+    
+    if 11 in list_cards and total_score > 21:
+        list_cards.remove(11)
+        list_cards.append(1)
+
     return total_score
