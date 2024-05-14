@@ -20,6 +20,10 @@ def calculate_score(list_cards):
 
 def compare(in_user_score, in_computer_score):
     """Checks to see who won the match"""
+
+    if in_user_score > 21 and in_computer_score > 21:
+        return "You went over 21. You lose!"
+    
     if in_user_score == in_computer_score:
         return "It's a draw!"
     
@@ -39,4 +43,4 @@ def compare(in_user_score, in_computer_score):
         return "You win!"
     
     else:
-        return "You lost!"
+        return "You lose!"
