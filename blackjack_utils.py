@@ -21,22 +21,22 @@ def calculate_score(list_cards):
 def compare(in_user_score, in_computer_score):
     """Checks to see who won the match"""
     if in_user_score == in_computer_score:
-        return "It's a draw!"
+        return f"It's a draw!\nYour score = {in_user_score} / Computer score = {in_computer_score}"
     
     elif in_computer_score == 0:
-        return "Blackjack! Computer won!"
+        return f"Blackjack! Computer won!\nYour score = {in_user_score} / Computer score = {in_computer_score}"
     
     elif in_user_score == 0:
-        return "Blackjack! You won!"
+        return f"Blackjack! You won!\nYour score = {in_user_score} / Computer score = {in_computer_score}"
     
     elif in_computer_score > 21:
-        return "The computer went over 21, you won!"
+        return f"The computer went over 21, you won!\nYour score = {in_user_score} / Computer score = {in_computer_score}"
     
     elif in_user_score > 21:
-        return "You went over 21, the computer won!"
+        return f"You went over 21, the computer won!\nYour score = {in_user_score} / Computer score = {in_computer_score}"
     
     elif in_user_score > in_computer_score:
-        return "You win!"
+        return f"You win!\nYour score = {in_user_score} / Computer score = {in_computer_score}"
     
     else:
-        return "You lost!"
+        return f"You lost!\nYour score = {in_user_score} / Computer score = {in_computer_score}"
